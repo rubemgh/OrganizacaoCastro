@@ -9,17 +9,24 @@
             <div class="page-header">
               <h2 class="mb-3 line-head" id="indicators">Listar</h2>
             </div>
-            <form action="listar_usuario.php">
+            <form action="listar_vendas.php">
    Buscar:<input type="text" name="buscar"/>
  <input type="submit"/>
+
 </form>
 <br>
 <style>
 table {
-  width: 100%;    
-  background-color:#FAFFCD;
   
+  width: 100%;    
+  background-color:#a8a6b3;
+  margin-top: 15px; 
 }
+tr:nth-child(even){background-color: #ffffff}
+      tr, th {
+          text-align: left;
+         padding:5px;
+         }
 </style>
 
 
@@ -38,7 +45,7 @@ table {
       
 
 
-      echo "<table style='width:50%' border>";
+      echo "<table style='width:50%' id='tables'>";
       echo"<tr>
        <th>id </th>
       <th>id_usuario </th>

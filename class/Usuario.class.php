@@ -91,4 +91,16 @@ class Usuario extends ClassConexao {
             return $resultado;
            
         } 
+        public function login($usuario){
+            $stmt = $this->conexao->prepare("Select * from  usuario 
+            WHERE email = :email and senha = :senha");
+         
+            $stmt->bindParam(':email', $usuario->email);
+            $stmt->bindParam(':senha', $usuario->senha);
+            $stmt->execute();
+
+            $resultado = $stmt->fetchAll();
+        
+            return $resultado;
+        }
     }

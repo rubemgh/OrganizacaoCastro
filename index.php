@@ -1,9 +1,3 @@
-<?php
-include_once "estructura/topo.php";
-
-?>
-   
-
-<?php
-    include_once "estructura/rodape.php";
-?>
+<?php 
+ header ("location:login.php");
+ ?>

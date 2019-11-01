@@ -37,9 +37,9 @@ class Vendas extends ClassConexao {
 
     return $resultado;
     }
-    public function Listarid($id) {
+    public function Listarid($id_usuario) {
    
-        $stmt = $this->conexao->prepare("Select * from vendas where id LIKE '%$id%'");
+        $stmt = $this->conexao->prepare("Select * from vendas where id_usuario LIKE '%$id_usuario%'");
         $stmt->execute();
     
         $resultado = $stmt->fetchAll();

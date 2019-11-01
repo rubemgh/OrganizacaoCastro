@@ -15,10 +15,16 @@
 </form>
 <style>
 table {
-  width: 100%;    
-  background-color:#FAFFCD;
   
+  width: 100%;    
+  background-color:#a8a6b3;
+  margin-top: 15px; 
 }
+tr:nth-child(even){background-color: #ffffff}
+      tr, th {
+          text-align: left;
+         padding:5px;
+         }
 </style>
 
         <?php
@@ -36,7 +42,7 @@ table {
       
 
 
-      echo "<table style='width:50%' border>";
+      echo "<table style='width:50%' id='tables'>";
       echo"<tr>
        <th>id </th>
        <th>id_categ</th>

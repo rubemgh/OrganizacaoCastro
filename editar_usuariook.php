@@ -6,9 +6,10 @@ $usuario = new Usuarios();
 
 print_r($_POST);
 
-   $objUsuario = new Usuario();
+   $usuario = new Usuario();
       //print_r($_POST);
 if($_POST['nome']!=""){
+   $sha256 = hash('sha256',$_POST["senha"]);
    $usuario->id = $_POST["id"];
    $usuario->nome = $_POST["nome"]; 
    $usuario->veiculo= $_POST["veiculo"];   
@@ -22,7 +23,7 @@ if($_POST['nome']!=""){
    $usuario->endereco = $_POST["endereco"];
    $usuario->celular= $_POST["celular"];
    $usuario->telefone= $_POST["telefone"];
-   $usuario->senha= $_POST["senha"];
+   $usuario->senha= $sha256;
    $banco = new Usuario();
 
    $resultado = $banco->editar($usuario);

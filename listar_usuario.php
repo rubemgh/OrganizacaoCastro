@@ -13,12 +13,19 @@
    Buscar:<input type="text" name="buscar"/>
  <input type="submit"/>
 </form>
+<br>
 <style>
 table {
-  width: 100%;    
-  background-color:#FAFFCD;
   
+  width: 100%;    
+  background-color:#a8a6b3;
+  margin-top: 15px; 
 }
+tr:nth-child(even){background-color: #ffffff}
+      tr, th {
+          text-align: left;
+         padding:3px;
+         }
 </style>
 
 
@@ -37,7 +44,7 @@ table {
       
 
 
-      echo "<table style='width:50%' border>";
+      echo "<table style='width:50%' id='tables'>";
       echo"<tr>
        <th>id </th>
       <th>Nome </th>
@@ -52,7 +59,7 @@ table {
       <th>endereco</th>
       <th>celular </th>
       <th> telefone </th>
-      <th>senha</th>
+      
       <th tolspan='2'>Açôes</th>
        </tr>";
 
@@ -74,7 +81,7 @@ table {
                 <td> ". $Usuario['endereco']." </td>
                 <td> ". $Usuario['celular']." </td>
                 <td> ". $Usuario['telefone']." </td>
-                <td> ". $Usuario['senha']." </td>
+               
                  <td><a href='editar_usuario.php?id=".$Usuario['id']."&nome=".$Usuario['nome']."&veiculo=".$Usuario['veiculo'].
                  "&placa=".$Usuario['placa']."&renavam=".$Usuario['renavam']."&email=".$Usuario['email']."&nascimento=".$Usuario['nascimento'].
                  "&rg=".$Usuario['rg']."&cedula=".$Usuario['cedula']."&tipo=".$Usuario['tipo']."&endereco=".$Usuario['endereco']."&celular=".$Usuario['celular'].

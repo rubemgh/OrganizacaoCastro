@@ -29,7 +29,7 @@
                   <br>Endereco:  <input type="text" name="endereco"value=<?php echo $_GET['endereco']?>></br>
                   <br>celular:  <input type="text" name="celular"value=<?php echo $_GET['celular']?>></br>
                   <br>telefone:  <input type="text" name="telefone"value=<?php echo $_GET['telefone']?>></br>
-                  <br>senha:  <input type="password" name="senha"value=<?php echo $_GET['senha']?>>
+                  <br>senha:  <input type="password" name="senha"value=<?php echo $_GET['senha']?>
 
                   <br/>
                   <input type="submit" name="botao"/>

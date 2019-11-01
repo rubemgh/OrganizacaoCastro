@@ -5,19 +5,20 @@ include_once 'class/Usuarios.php';
 $usuario = new Usuarios();
 print_r($_POST);
 if($_POST['nome']!=""){
+    $sha256 = hash('sha256',$_POST["senha"]);
     $usuario->nome = $_POST['nome'];
     $usuario->veiculo= $_POST["veiculo"];     
     $usuario->placa= $_POST["placa"];   
     $usuario->renavam= $_POST["renavam"];
     $usuario->email= $_POST["email"];
-	$usuario->nascimento = $_POST["nascimento"];
+  	$usuario->nascimento = $_POST["nascimento"];
     $usuario->rg = $_POST["rg"];
     $usuario->cedula= $_POST["cedula"];
     $usuario->tipo = $_POST["tipo"];
     $usuario->endereco = $_POST["endereco"];
     $usuario->celular= $_POST["celular"];
     $usuario->telefone= $_POST["telefone"];
-	$usuario->senha= $_POST["senha"];
+    $usuario->senha= $sha256;
 
   $banco = new Usuario();
 
